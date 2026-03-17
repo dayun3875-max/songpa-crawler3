@@ -2,7 +2,7 @@ name: zigbang_collect
 
 on:
   schedule:
-    - cron: '0 2 * * *'  
+    - cron: '0 2 * * *'   
   workflow_dispatch:
 
 permissions:
@@ -33,3 +33,4 @@ jobs:
           git add *.csv
           git diff --staged --quiet || git commit -m "daily zigbang data"
           git push
+
